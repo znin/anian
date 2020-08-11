@@ -1,0 +1,152 @@
+<template>
+	<div class="loding">
+		<div class="loader"></div>
+	</div>
+</template>
+
+
+<script>
+	 export default {
+		name:"loding",
+		props:[],
+		data(){
+			return {
+				
+			}
+		},
+		mounted(){
+		},
+		methods:{
+		},
+		components:{
+		},
+		updated(){
+
+		},
+		destoryed(){
+		}
+	}
+
+</script>
+
+<style scoped>
+.loding{
+position: absolute;
+width: 100%;
+}
+
+ .loader {
+	
+  font-size: 20px;
+  margin: 45% auto;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-animation: load4 1.3s infinite linear;
+  animation: load4 1.3s infinite linear;
+}
+@-webkit-keyframes load4 {
+  0%,
+  100% {
+    box-shadow: 0em -3em 0em 0.2em #37ccc00, 2em -2em 0 0em #37ccc0, 3em 
+0em 0 -0.5em #37ccc0, 2em 2em 0 -0.5em #37ccc0, 0em 3em 0 -0.5em 
+#37ccc0, -2em 2em 0 -0.5em #37ccc0, -3em 0em 0 -0.5em #37ccc0, -2em -2em
+ 0 0em #37ccc0;
+  }
+  12.5% {
+    box-shadow: 0em -3em 0em 0em #37ccc0, 2em -2em 0 0.2em #37ccc0, 3em 
+0em 0 0em #37ccc0, 2em 2em 0 -0.5em #37ccc0, 0em 3em 0 -0.5em #37ccc0, 
+-2em 2em 0 -0.5em #37ccc0, -3em 0em 0 -0.5em #37ccc0, -2em -2em 0 -0.5em
+ #37ccc0;
+  }
+  25% {
+    box-shadow: 0em -3em 0em -0.5em #37ccc0, 2em -2em 0 0em #37ccc0, 3em
+ 0em 0 0.2em #37ccc0, 2em 2em 0 0em #37ccc0, 0em 3em 0 -0.5em #37ccc0, 
+-2em 2em 0 -0.5em #37ccc0, -3em 0em 0 -0.5em #37ccc0, -2em -2em 0 -0.5em
+ #37ccc0;
+  }
+  37.5% {
+    box-shadow: 0em -3em 0em -0.5em #37ccc0, 2em -2em 0 -0.5em #37ccc0, 
+3em 0em 0 0em #37ccc0, 2em 2em 0 0.2em #37ccc0, 0em 3em 0 0em #37ccc0, 
+-2em 2em 0 -0.5em #37ccc0, -3em 0em 0 -0.5em #37ccc0, -2em -2em 0 -0.5em
+ #37ccc0;
+  }
+  50% {
+    box-shadow: 0em -3em 0em -0.5em #37ccc0, 2em -2em 0 -0.5em #37ccc0, 
+3em 0em 0 -0.5em #37ccc0, 2em 2em 0 0em #37ccc0, 0em 3em 0 0.2em 
+#37ccc0, -2em 2em 0 0em #37ccc0, -3em 0em 0 -0.5em #37ccc0, -2em -2em 0 
+-0.5em #37ccc0;
+  }
+  62.5% {
+    box-shadow: 0em -3em 0em -0.5em #37ccc0, 2em -2em 0 -0.5em #37ccc0, 
+3em 0em 0 -0.5em #37ccc0, 2em 2em 0 -0.5em #37ccc0, 0em 3em 0 0em 
+#37ccc0, -2em 2em 0 0.2em #37ccc0, -3em 0em 0 0em #37ccc0, -2em -2em 0 
+-0.5em #37ccc0;
+  }
+  75% {
+    box-shadow: 0em -3em 0em -0.5em #37ccc0, 2em -2em 0 -0.5em #37ccc0, 
+3em 0em 0 -0.5em #37ccc0, 2em 2em 0 -0.5em #37ccc0, 0em 3em 0 -0.5em 
+#37ccc0, -2em 2em 0 0em #37ccc0, -3em 0em 0 0.2em #37ccc0, -2em -2em 0 
+0em #37ccc0;
+  }
+  87.5% {
+    box-shadow: 0em -3em 0em 0em #37ccc0, 2em -2em 0 -0.5em #37ccc0, 3em
+ 0em 0 -0.5em #37ccc0, 2em 2em 0 -0.5em #37ccc0, 0em 3em 0 -0.5em 
+#37ccc0, -2em 2em 0 0em #37ccc0, -3em 0em 0 0em #37ccc0, -2em -2em 0 
+0.2em #37ccc0;
+  }
+}
+@keyframes load4 {
+  0%,
+  100% {
+    box-shadow: 0em -3em 0em 0.2em #37ccc0, 2em -2em 0 0em #37ccc0, 3em 
+0em 0 -0.5em #37ccc0, 2em 2em 0 -0.5em #37ccc0, 0em 3em 0 -0.5em 
+#37ccc0, -2em 2em 0 -0.5em #37ccc0, -3em 0em 0 -0.5em #37ccc0, -2em -2em
+ 0 0em #37ccc0;
+  }
+  12.5% {
+    box-shadow: 0em -3em 0em 0em #37ccc0, 2em -2em 0 0.2em #37ccc0, 3em 
+0em 0 0em #37ccc0, 2em 2em 0 -0.5em #37ccc0, 0em 3em 0 -0.5em #37ccc0, 
+-2em 2em 0 -0.5em #37ccc0, -3em 0em 0 -0.5em #37ccc0, -2em -2em 0 -0.5em
+ #37ccc0;
+  }
+  25% {
+    box-shadow: 0em -3em 0em -0.5em #37ccc0, 2em -2em 0 0em #37ccc0, 3em
+ 0em 0 0.2em #37ccc0, 2em 2em 0 0em #37ccc0, 0em 3em 0 -0.5em #37ccc0, 
+-2em 2em 0 -0.5em #37ccc0, -3em 0em 0 -0.5em #37ccc0, -2em -2em 0 -0.5em
+ #37ccc0;
+  }
+  37.5% {
+    box-shadow: 0em -3em 0em -0.5em #37ccc0, 2em -2em 0 -0.5em #37ccc0, 
+3em 0em 0 0em #37ccc0, 2em 2em 0 0.2em #37ccc0, 0em 3em 0 0em #37ccc0, 
+-2em 2em 0 -0.5em #37ccc0, -3em 0em 0 -0.5em #37ccc0, -2em -2em 0 -0.5em
+ #37ccc0;
+  }
+  50% {
+    box-shadow: 0em -3em 0em -0.5em #37ccc0, 2em -2em 0 -0.5em #37ccc0, 
+3em 0em 0 -0.5em #37ccc0, 2em 2em 0 0em #37ccc0, 0em 3em 0 0.2em 
+#37ccc0, -2em 2em 0 0em #37ccc0, -3em 0em 0 -0.5em #37ccc0, -2em -2em 0 
+-0.5em #37ccc0;
+  }
+  62.5% {
+    box-shadow: 0em -3em 0em -0.5em #37ccc0, 2em -2em 0 -0.5em #37ccc0, 
+3em 0em 0 -0.5em #37ccc0, 2em 2em 0 -0.5em #37ccc0, 0em 3em 0 0em 
+#37ccc0, -2em 2em 0 0.2em #37ccc0, -3em 0em 0 0em #37ccc0, -2em -2em 0 
+-0.5em #37ccc0;
+  }
+  75% {
+    box-shadow: 0em -3em 0em -0.5em #37ccc0, 2em -2em 0 -0.5em #37ccc0, 
+3em 0em 0 -0.5em #37ccc0, 2em 2em 0 -0.5em #37ccc0, 0em 3em 0 -0.5em 
+#37ccc0, -2em 2em 0 0em #37ccc0, -3em 0em 0 0.2em #37ccc0, -2em -2em 0 
+0em #37ccc0;
+  }
+  87.5% {
+    box-shadow: 0em -3em 0em 0em #37ccc0, 2em -2em 0 -0.5em #37ccc0, 3em
+ 0em 0 -0.5em #37ccc0, 2em 2em 0 -0.5em #37ccc0, 0em 3em 0 -0.5em 
+#37ccc0, -2em 2em 0 0em #37ccc0, -3em 0em 0 0em #37ccc0, -2em -2em 0 
+0.2em #37ccc0;
+  }
+}
+</style>
