@@ -18,7 +18,8 @@ function getWb(arr,data) {
             screen_name:statuses[i].user.screen_name,//昵称
             avatar_hd:statuses[i].user.avatar_hd,//头像
             pics:statuses[i].pics,//图片
-            text:statuses[i].text
+            text:statuses[i].text,
+            isadd:false
         } 
         arr.push(obj)
     }

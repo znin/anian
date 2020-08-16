@@ -11,7 +11,7 @@ router.get('/:goodsname',(req,res,next)=> {
     
     let collectionName=req.params.goodsname;
     
-    let { _page, _limit, _sort, q ,_kw} = req.body;
+    let { _page, _limit, _sort, q ,_kw} = req.query;
     console.log(collectionName, _page, _limit, _sort, q ,_kw)
     mgdb.findList({collectionName,_page,_limit,_sort,q,_kw})
     .then( result => res.send(result))

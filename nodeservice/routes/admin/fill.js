@@ -10,8 +10,9 @@ router.get('/:file',(req,res,next)=>{
         res.send({err:0,msg:"success",data:result})
         }
 
-    ).catch(
-        (err)=>console.log(err)
+    ).catch(err => res.send({err:1,msg:"填充错误",data:err})
+        
+        
     )
 })
 module.exports=router;

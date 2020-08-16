@@ -1,11 +1,11 @@
 <template>
-	<div class="wb-top" @keydown.13="search">
+	<div class="wb-top" >
 		<div class="top-wrap">
 			<router-link to="/user" tag="span"><img src="./assets/img/wo.png"></router-link>
 			
 			<div class="top-input">
-				<img src="./assets/img/fangdajing.png"><input type="text" placeholder="大家都在搜" v-model="searchText"></div>
-			<router-link to="/msgbox" class="top-msg" tag="div"><em>3</em></router-link>
+				<img src="./assets/img/fangdajing.png"><input type="text" placeholder="大家都在搜(正文检索)" v-model="seachText" @keydown.13="$emit('keydown',seachText)" ></div>
+			<router-link to="/msgbox" class="top-msg" tag="div"><em>{{$store.state.follow.follows.length}}</em></router-link>
 			
 				
 			<router-link to="/updata" style="width: .8rem;" tag="span"><img src="./assets/img/xiezi.png"></router-link>
@@ -18,18 +18,21 @@
 <script>
 	 export default {
 		name:"wb-top",
-		props:[],
+		props:{
+			searchText:{
+				type:String,
+				defaultL:"",
+			},	
+		},
 		data(){
 			return {
-			searchText:"",	
+			seachText:"",
 			}
 		},
 		mounted(){
 		},
 		methods:{
-			search(){
-				alert("2");
-			}
+			
 		},
 		components:{
 		},

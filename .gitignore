@@ -3,6 +3,7 @@ node_modules
 /dist
 /nodeservice/node_modules
 /vueclient/node_modules
+/vueclient/dist
 # local env files
 .env.local
 .env.*.local

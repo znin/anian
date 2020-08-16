@@ -2,13 +2,18 @@ import axios from "axios";
 import Vue from "vue"
 import router from "./router.js"
 import vm from "../main.js"
+
+import store from "./vuex.js"
+import {UPDATE_WLOADING} from "../store/types.js"
+
 //请求拦截器
 axios.interceptors.request.use(function(config){
 	let token=window.localStorage.getItem('uuid')
 	config.headers={
 		token
 	}
-	vm.wLoding=true;
+	//vm.wLoding=true;
+	store.commit(UPDATE_WLOADING,true)
 	return config;
 })
 
@@ -28,7 +33,8 @@ axios.interceptors.response.use(function(response) {
   }
   
   // 隐藏loading
-  vm.wLoding=false;
+  //vm.wLoding=false;
+  store.commit(UPDATE_WLOADING,false)
   return response;//奔向组件
 }, function(error) {
   // 错误的响应，拦截

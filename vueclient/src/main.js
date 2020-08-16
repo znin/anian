@@ -11,14 +11,20 @@ Object.keys(filters).map(key=>Vue.filter(key,filters[key]))
 
 import {baseUrl} from "./config/base.js"
 Vue.prototype.$baseUrl=baseUrl;
+
+//状态管理
+ import store from "./plugins/vuex.js"
+import * as types from "./store/types.js"
+ Vue.prototype.$types=types;
+ 
+
  let vm=new Vue({
 	data:{
-		wTop:true,
-		wNav:true,
-		wLoding:true,
+		
 	},
   render: h => h(Default),
   router,
+  store,
   
 }).$mount('#app')
 

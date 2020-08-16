@@ -1,34 +1,6 @@
 {
 	"ok": 1,
-	"data": [{
-		"user": {
-			"id": 2735327001,
-			"avatar_large": "https:\/\/tvax2.sinaimg.cn\/crop.0.0.512.512.180\/a309c719ly8gdk51d8fstj20e80e8mxd.jpg?KID=imgbed,tva&Expires=1596891843&ssig=TSmV9l6WEm",
-			"screen_name": "微博安全中心",
-			"remark": "",
-			"verified": true,
-			"verified_type": 7,
-			"verified_type_ext": 50
-		},
-		"created_at": "11分钟前",
-		"scheme": "\/message\/chat?uid=2735327001",
-		"unread": 1,
-		"text": "验证码：471997，仅用于登录你的微博帐号，30分钟内有效。"
-	}, {
-		"user": {
-			"id": 2028810631,
-			"avatar_large": "https:\/\/tvax2.sinaimg.cn\/crop.0.0.200.200.180\/78ed3187ly8gdi6uao6x9j205k05kq2t.jpg?KID=imgbed,tva&Expires=1596891843&ssig=fKnjSrJ8NL",
-			"screen_name": "新浪新闻",
-			"remark": "",
-			"verified": true,
-			"verified_type": 3,
-			"verified_type_ext": 0
-		},
-		"created_at": "1小时前",
-		"scheme": "\/message\/chat?uid=2028810631",
-		"unread": 0,
-		"text": " 被前女友约上山“舒服一下” 男子脱光后惨了"
-	}, {
+	"data": [ {
 		"user": {
 			"id": 1658570387,
 			"avatar_large": "https:\/\/tvax3.sinaimg.cn\/crop.0.0.996.996.180\/62dbc693ly8gfwqxoi64nj20ro0roac6.jpg?KID=imgbed,tva&Expires=1596891843&ssig=B1O2ZJTlr3",

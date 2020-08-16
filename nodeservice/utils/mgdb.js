@@ -17,7 +17,8 @@ let open=({url=address,dbName=mogodbName,collectionName})=>{
         }
         mongoclient.connect(url,options,(err,client)=>{
             if(err){
-                reject({err:1, msg:"数据库连接失败"});//连接失败
+                console.log(err)
+                reject({err:1, msg:"数据库连接失败",data:err});//连接失败
             }else{
                 connect=client;
                 let db=client.db(dbName);

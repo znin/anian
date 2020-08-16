@@ -25,7 +25,8 @@ router.post('/',(req,res,next)=>{
             }else{
                 console.log(result)
                 let bool=bcrypt.compareSync(password,result[0].password)
-                if(bool){
+                console.log(bool)
+                if(!bool){
                     res.send({err:1,msg:"密码错误"})
                     
                 }else{

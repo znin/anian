@@ -70,6 +70,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/admin/fill',  require('./routes/admin/fill'));
 app.use('/admin/spilder',  require('./routes/admin/spilder'));
+app.use('/admin/modify',  require('./routes/admin/modify'));
 //app.use('/admin/login',  require('./routes/user/login'));
 
 app.all('/user/*', require('./routes/user/params'));
@@ -97,7 +98,7 @@ app.use(function(err, req, res, next) {
   }else if(req.url.includes('/admin')){
     res.render('error');
   }else{ //解决 vue项目部署后的问题
- 
+ res.sendFile(path.join(__dirname,'public','template','index.html'))
   }
   
 });

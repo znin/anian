@@ -1,16 +1,16 @@
 <template>
 	
-	<div  class="wb-card" @click="getDetail">
+	<div  class="wb-card" >
 		<div class="card-header">
 			<img :src="item.avatar_hd">
 			<ul>
 				<li>{{item.screen_name}}</li>
 				<li><span>{{item.created_at | date}}</span><span v-if="item.source">来自</span><span>{{item.source}}</span></li>
 			</ul>
-			<span>+关注</span>
+			<span @click="add" ref='add' :class="item.isadd ? 'active':''">+关注</span>
 		</div>
 		
-		<div class="card-article">
+		<div class="card-article" @click="getDetail">
 			<div v-html="item.text" class="article-text">
 			
 			</div>
@@ -52,7 +52,7 @@
 		},
 		data(){
 			return {
-			
+			isAdd:false
 		}
 		},
 		methods:{
@@ -66,6 +66,21 @@
 					this.$router.push({name:this.to.name,params:this.to.params,query:this.to.query})
 				}
 			},
+			add(){
+				this.$emit('click',this.item)
+				this.isAdd = !this.isAdd
+				console.log(this.to.query.collectionName)
+				this.$axios.post(`admin/modify/${this.to.query.collectionName}/${this.item._id}`)
+				.then(res =>{
+					if(res.data.err==0){
+						this.item.isadd=!this.item.isadd
+					}
+					console.log(res.data)
+				})
+				//this.$refs.add.style.background=""
+				
+				
+			}
 		},
 		components:{
 			
@@ -144,5 +159,8 @@ overflow: hidden;
 	float: right;
 	font-size: .25rem;
 	padding: .3rem 0 .3rem ;
+}
+.active{
+	background:#dde3d9 ;
 }
 </style>

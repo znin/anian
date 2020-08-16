@@ -66,9 +66,10 @@
 	background: url(assets/img/arrow-left_1.png) no-repeat;
 }
 .nav {width:100%; position:fixed; left:0; z-index:2; background:#fafafa;overflow: scroll;}
-.nav ul{height:0.75rem; margin:0 auto;overflow: scroll;text-align: center;display: flex;width: fit-content;}
+.nav ul{height:0.75rem; margin:0 auto;text-align: center;display: flex;width: fit-content;}
 .nav ul li{width:1.46rem;height:0.75rem; }
-.nav ul li a{ display:block;width:1.46rem;height:0.75rem; line-height:0.75rem; text-align:center; font-size:0.3rem; color:#A9B1B9;padding-bottom: .06rem;}
+.nav ul li a{ display:block;width:1.46rem;height:0.5rem; line-height:0.75rem; text-align:center; font-size:0.3rem; color:#A9B1B9;padding-bottom: .06rem;}
+.nav ul li i{ display: none }
 .nav ul li.active a{height:0.5rem; color:#5A5A5A;text-align: center;}
 .nav ul li.active i{display: block; width: .2rem; border-bottom:.1rem solid #000b12; color:#5477b2;margin: .1rem auto;}
 </style>

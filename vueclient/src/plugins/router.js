@@ -2,20 +2,34 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 
 import Home from "../pages/home.vue"
-import Login from "../pages/login.vue"
-import Logout from "../pages/logout.vue"
-import Err from "../pages/err.vue"
-import TopList from "../pages/toplist.vue"
-import HotList from "../pages/hotlist.vue"
-import NewList from "../pages/newlist.vue"
-import MovieList from "../pages/movielist.vue"
-import MusicList from "../pages/musiclist.vue"
-import ScienceList from "../pages/sciencelist.vue"
+//import Login from "../pages/login.vue"
+//import Logout from "../pages/logout.vue"
+//import Err from "../pages/err.vue"
+//import TopList from "../pages/toplist.vue"
+//import HotList from "../pages/hotlist.vue"
+
+
+
+const Login =()=>import (/* webpackchunkName:"groupname-" */ "../pages/login.vue")
+const Logout =()=>import (/* webpackchunkName:"groupname-" */ "../pages/logout.vue")
+const Err =()=>import (/* webpackchunkName:"groupname-" */ "../pages/err.vue")
+const TopList =()=>import (/* webpackchunkName:"groupname-" */ "../pages/toplist.vue")
+const HotList =()=>import (/* webpackchunkName:"groupname-" */ "../pages/hotlist.vue")
+
+
+//import NewList from "../pages/newlist.vue"
+//import MovieList from "../pages/movielist.vue"
+//import MusicList from "../pages/musiclist.vue"
+//import ScienceList from "../pages/sciencelist.vue"
+
+
 import Register from "../pages/register.vue"
 import User from "../pages/user.vue"
 import MsgBox from "../pages/msgbox.vue"
 import Detail from "../pages/detail.vue"
 import Updata from "../pages/updata.vue"
+import MyFollow from "../pages/myfollow.vue"
+import MsgInfo from "../pages/msginfo.vue"
 
 Vue.use(VueRouter)
 
@@ -30,7 +44,8 @@ let routes=[
 	{
 		name:"newlist",
 		path:"/newlist",
-		component:NewList,
+		//component:NewList,
+		component:(r) => { require(["../pages/newlist.vue"],r)},
 		meta:{a:1,b:2}
 	},
 	{
@@ -42,19 +57,23 @@ let routes=[
 	{
 		name:"musiclist",
 		path:"/musiclist",
-		component:MusicList,
+		//component:MusicList,
+		component:(r) => { require(["../pages/musiclist.vue"],r)},
 		meta:{a:1,b:2}
 	},
 	{
 		name:"movielist",
 		path:"/movielist",
-		component:MovieList,
+		//component:MovieList,
+		component:(r) => { require(["../pages/movielist.vue"],r)},
 		meta:{a:1,b:2}
 	},
 	{
 		name:"sciencelist",
 		path:"/sciencelist",
-		component:ScienceList,
+		//component:ScienceList,
+		
+		component:(r) => { require(["../pages/sciencelist.vue"],r)},
 		meta:{a:1,b:2}
 	},
 	{
@@ -96,8 +115,19 @@ let routes=[
 	{
 		name:"msgbox",
 		path:"/msgbox",
+		redirect:"/msgbox/myfollow",
 		component:MsgBox,
-		meta:{a:1,b:2}
+		children:[{
+			name:"myfollow",
+			path:"/msgbox/myfollow",
+			component:MyFollow,
+		},{
+			name:"msginfo",
+			path:"/msgbox/msginfo",
+			component:MsgInfo,
+		}
+		]
+		
 	},
 	{
 		path:"/logout",
